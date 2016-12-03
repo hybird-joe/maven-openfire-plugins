@@ -1,0 +1,119 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.szmengran</groupId>
+    <artifactId>maven-openfire-plugins</artifactId>
+    <version>1.0</version>
+  </parent>
+  <artifactId>openfire-receipt-plugin</artifactId>
+  <repositories>
+    <repository>
+      <id>clojars.org</id>
+      <url>http://clojars.org/repo</url>
+    </repository>
+  </repositories>
+  <dependencies>
+    <dependency>
+      <groupId>org.igniterealtime.openfire</groupId>
+      <artifactId>openfire</artifactId>
+      <version>4.0.1</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.clojars.aaroniba</groupId>
+      <artifactId>javapns</artifactId>
+      <version>2.2</version>
+    </dependency>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>servlet-api</artifactId>
+      <version>2.5</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>commons-fileupload</groupId>
+      <artifactId>commons-fileupload</artifactId>
+      <version>1.2.2</version>
+    </dependency>
+    <dependency>
+      <groupId>commons-io</groupId>
+      <artifactId>commons-io</artifactId>
+      <version>2.4</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/redis.clients/jedis -->
+	<dependency>
+	    <groupId>redis.clients</groupId>
+	    <artifactId>jedis</artifactId>
+	    <version>2.9.0</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpcore -->
+	<dependency>
+	    <groupId>org.apache.httpcomponents</groupId>
+	    <artifactId>httpcore</artifactId>
+	    <version>4.4.5</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
+	<dependency>
+	    <groupId>org.apache.httpcomponents</groupId>
+	    <artifactId>httpclient</artifactId>
+	    <version>4.5.2</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-pool2 -->
+	<dependency>
+	    <groupId>org.apache.commons</groupId>
+	    <artifactId>commons-pool2</artifactId>
+	    <version>2.4.2</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
+	<dependency>
+	    <groupId>commons-codec</groupId>
+	    <artifactId>commons-codec</artifactId>
+	    <version>1.10</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.bouncycastle/bcprov-jdk15on -->
+	<dependency>
+	    <groupId>org.bouncycastle</groupId>
+	    <artifactId>bcprov-jdk15on</artifactId>
+	    <version>1.55</version>
+	</dependency>
+	
+  </dependencies>
+  <build>
+    <finalName>openfire-apns</finalName>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.7</source>
+          <target>1.7</target>
+        </configuration>
+        <version>3.0</version>
+      </plugin>
+      <plugin>
+        <groupId>com.reucon.maven.plugins</groupId>
+        <artifactId>maven-openfire-plugin</artifactId>
+        <extensions>true</extensions>
+        <version>1.0.2-SNAPSHOT</version>
+      </plugin>
+    </plugins>
+  </build>
+  <licenses>
+    <license>
+      <name>GNU General Public License (GPL) v3</name>
+      <url>http://www.gnu.org/licenses/gpl.txt</url>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <id>hybird-joe</id>
+      <name>Joe</name>
+      <email>hybirdjoeios@gmail.com</email>
+      <roles>
+        <role>Main contributor</role>
+      </roles>
+    </developer>
+  </developers>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+</project>
